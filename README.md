@@ -122,7 +122,7 @@ I've been tracking all the changes with git so if you want to understand how I b
 | Perf     | Performance improvements                                     |
 | Refactor | Development changes that don't affect functionality          |
 | Style    | Styling changes, like identations, semi-colons, quotes, etc  |
-| Test     | Add, relactor or delete tests                                |
+| Test     | Add, refactor or delete tests                                |
 
 ##### Body
 
