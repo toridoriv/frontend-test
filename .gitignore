@@ -90,3 +90,5 @@ typings/
 # Local settings
 .idea
 .DS_Store
+
+documentation/
