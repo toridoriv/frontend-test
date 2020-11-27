@@ -2,9 +2,9 @@
   "name": "cornershop-frontend-test",
   "version": "1.0.0",
   "description": "Frontend test for cornershop app",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"node server/index.js\""
+    "start": "concurrently \"react-scripts start\" \"node server/index.tsx\""
   },
   "author": "Cornershop",
   "license": "ISC",
