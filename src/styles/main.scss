@@ -1,0 +1,10 @@
+/* Overriding Bulma styles */
+@import 'colors';
+@import '~bulma';
+
+// TODO: Move this to a better file
+
+.container.columns {
+  height: 100vh;
+  margin: 0;
+}
