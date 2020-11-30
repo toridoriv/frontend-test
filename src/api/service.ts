@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class ApiService {
+export default class Service {
 	api: any;
 
 	constructor() {
