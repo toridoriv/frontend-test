@@ -1,11 +1,11 @@
-import ApiService from './apiService';
+import Service from './service';
 
-export default class ApiActions {
+export default class Middleware {
 
-	public apiService: ApiService;
+	public apiService: Service;
 
 	constructor() {
-		this.apiService = new ApiService;
+		this.apiService = new Service;
 	}
 
 	noIdea() {
