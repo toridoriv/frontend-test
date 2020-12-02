@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nerdalot/frontend-test/static/css/main.5b8820ff.chunk.css",
-    "main.js": "/nerdalot/frontend-test/static/js/main.43beb055.chunk.js",
-    "main.js.map": "/nerdalot/frontend-test/static/js/main.43beb055.chunk.js.map",
+    "main.js": "/nerdalot/frontend-test/static/js/main.30cfc3dd.chunk.js",
+    "main.js.map": "/nerdalot/frontend-test/static/js/main.30cfc3dd.chunk.js.map",
     "runtime-main.js": "/nerdalot/frontend-test/static/js/runtime-main.ad638cb2.js",
     "runtime-main.js.map": "/nerdalot/frontend-test/static/js/runtime-main.ad638cb2.js.map",
     "static/js/2.36a76b30.chunk.js": "/nerdalot/frontend-test/static/js/2.36a76b30.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ad638cb2.js",
     "static/js/2.36a76b30.chunk.js",
     "static/css/main.5b8820ff.chunk.css",
-    "static/js/main.43beb055.chunk.js"
+    "static/js/main.30cfc3dd.chunk.js"
   ]
 }
