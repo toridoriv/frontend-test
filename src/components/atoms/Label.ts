@@ -1,16 +1,16 @@
 import { React } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
-interface ITagProps {
+interface ILabelProps {
 	text: React.ReactNode;
 };
 
-const Tag: React.FC<ITagProps> = ({
-	text = 'I am a tag'
+const Label: React.FC<ILabelProps> = ({
+	text = 'Label'
 }) => {
-	return el('span', {
-		className: 'tag is-medium'
+	return el('label', {
+		className: 'label'
 	}, text);
 };
 
-export default Tag;
+export default Label;

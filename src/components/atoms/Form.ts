@@ -1,14 +1,18 @@
 import { React } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
-interface IColumnProps {
+interface IFormProps {
 	children: Array<React.ReactNode>;
 };
 
-const Column: React.FC<IColumnProps> = ({ children = el('div') }) => {
+const Form: React.FC<IFormProps> = ({
+	children = [
+		el('input')
+	]
+}) => {
 	return el('div', {
-		className: 'column'
+		className: 'field'
 	}, children);
 };
 
-export default Column;
+export default Form;
