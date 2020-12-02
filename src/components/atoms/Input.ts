@@ -1,43 +1,26 @@
-import { React } from './../../constants/_dependencies';
+import { React, v4 } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
-// TODO: Add help field
-
 interface IInputProps {
-	hasLabel: boolean;
-	label: string;
+	className?: string;
 	placeholder: string;
 	type: string;
+	value?: string;
 };
 
 const Input: React.FC<IInputProps> = ({
-	hasLabel = true,
-	label = 'Input Title',
-	placeholder = 'Placeholder',
-	type = 'text'
+	className = 'input',
+	placeholder = 'I am a placeholder',
+	type = 'text',
+	...props
 }) => {
-
-	const children:any = [];
-
-	if (hasLabel) {
-		children.push(el('label', {}, label));
-	}
-
-	const input = el('input', {
-		className: 'input',
+	return el('input', {
+		className,
+		key: v4(),
+		placeholder,
 		type,
-		placeholder
+		value: props.value
 	});
-
-	const control = el('div', {
-		className: 'control'
-	}, input);
-
-	return el('div', {
-		className: 'field'
-	}, [
-		control
-	]);
 };
 
 export default Input;
