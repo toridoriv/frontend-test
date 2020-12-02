@@ -8,3 +8,18 @@
   height: 100vh;
   margin: 0;
 }
+
+.control.has-icon-left .icon {
+	color: #dbdbdb;
+  height: 2.5em;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+	left: 0;
+  width: 2.5em;
+  z-index: 4;
+}
+
+.input {
+	padding-left: 2.5em;
+}

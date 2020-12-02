@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-import App from './App';
-
-// ReactDOM.render(<App/>, document.getElementById('root'));
+import { React, ReactDOM, Route, Router, Switch } from './constants/_dependencies';
+import { App } from './constants/_components';
+import './styles/main.scss';
 
 const Routing = () => {
 	return (
-		<Router>
-			<Route exact path="/" component={ App }/>
+		<Router basename="/frontend-test">
+			<Switch>
+				<Route exact path="/" component={ App }/>
+			</Switch>
 		</Router>
 	);
 };
