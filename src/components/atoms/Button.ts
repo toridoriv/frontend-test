@@ -1,45 +1,25 @@
-import { React, v4 } from './../../constants/_dependencies';
-import { Icon } from './../../constants/_components';
+import { React } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
 interface IButtonProps {
+	children?: Array<React.ReactNode>;
   classes?: string;
-  hasIcon?: boolean;
-	iconType?: string;
   isPrimary?: boolean;
-  label?: string;
+  label: string;
   onClick?: () => void;
 };
 
 const Button: React.FC<IButtonProps> = ({
-	classes = 'button',
-	hasIcon = true,
-	iconType = 'plus',
 	isPrimary = true,
-	label = 'Button',
-	onClick = () => { console.log ('Hi, I am a button'); }
+	label = 'Click me 😏',
+	onClick = () => { console.log('😳'); },
+	...props
 }) => {
 
-	const children:any = [];
-
-	if (label) {
-		children.push(el('span', { key: v4() }, label));
-	};
-
-	if (hasIcon && label) {
-		children.push(el('span', { style: { marginLeft: '.5em' }, key: v4() }));
-	}
-
-	if (hasIcon) {
-		children.push(Icon({ type: iconType}));
-	};
-
-
-
 	return el('button', {
-		className: isPrimary ? classes + ' is-primary' : classes,
+		className: isPrimary ? 'button ' + props.classes + ' is-primary' : 'button ' + props.classes,
 		onClick
-	}, children);
+	}, [ props.children, label ]);
 
 };
 
