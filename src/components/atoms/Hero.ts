@@ -1,4 +1,4 @@
-import { React, v4 } from './../../constants/_dependencies';
+import { React } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
 interface IHeroProps {
@@ -14,18 +14,15 @@ const Hero: React.FC<IHeroProps> = ({
 }) => {
 
 	const titleCont = el('h1', {
-		className: 'title',
-		key: v4()
+		className: 'title'
 	}, title);
 
 	const subtitleCont = el('h2', {
-		className: 'subtitle',
-		key: v4()
+		className: 'subtitle'
 	}, subtitle);
 
 	const container = el('div', {
-		className: 'container',
-		key: v4()
+		className: 'container'
 	}, [ titleCont, subtitleCont ]);
 
 	const body = el('div', {
@@ -33,8 +30,7 @@ const Hero: React.FC<IHeroProps> = ({
 	}, container);
 
 	return el('section', {
-		className: isPrimary ? 'hero primary' : 'hero',
-		key: v4()
+		className: isPrimary ? 'hero primary' : 'hero'
 	}, [ body ]);
 };
 
