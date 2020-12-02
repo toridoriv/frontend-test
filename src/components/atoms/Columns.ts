@@ -1,15 +1,14 @@
-import { React, v4 } from './../../constants/_dependencies';
+import { React } from './../../constants/_dependencies';
 import { el } from './../../constants/_variables';
 
 interface IColumnsProps {
-	children: any;
+	children: Array<React.ReactNode>;
 }
 
 const Columns: React.FC<IColumnsProps> = ({ children = el('div') }) => {
 	return el('div', {
-		className: 'columns',
-		key: v4()
+		className: 'columns'
 	}, children);
-}
+};
 
 export default Columns;
