@@ -15,7 +15,7 @@ function CreateCounter({ ...props }) {
 					</Columns>
 					<Columns classes={ ['is-centered'] }>
 						<Column classes={ ['is-half'] }>
-							<CreateCounterInput/>
+							<CreateCounterInput value={ props.value } onChange={ props.onChange }/>
 						</Column>
 					</Columns>
 					<Columns classes={ ['is-centered'] }>

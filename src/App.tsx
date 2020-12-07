@@ -1,4 +1,4 @@
-import { React, Welcome, Main, useState, CreateCounter } from './scripts/imports';
+import { React, Welcome, Main, useState, CreateCounter, Examples } from './scripts/imports';
 
 function App() {
 
@@ -22,7 +22,10 @@ function App() {
 				return <Main value={ [ loading, counters ] } onChange={ [setLoading, setCounters, setCurrentScreen ] }/>;
 			}
 			case 'CreateCounter': {
-				return <CreateCounter/>;
+				return <CreateCounter value={ [ loading, counters ] } onChange={ [setLoading, setCounters, setCurrentScreen ] }/>;
+			}
+			case 'Examples': {
+				return <Examples/>;
 			}
 			default:
 				return <Welcome value={ userStatus } onChange={ handleUserStateChange } />;

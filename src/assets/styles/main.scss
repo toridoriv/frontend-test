@@ -25,9 +25,15 @@
   margin-top: .8em;
   margin-left: .5em;
   color: #888B90;
-  a {
+  button.link {
     text-decoration: underline;
     color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
   }
 }
 
@@ -76,6 +82,10 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+}
+
+.mini-navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .message-header {
