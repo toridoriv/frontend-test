@@ -1,14 +1,12 @@
-import { React } from './../../constants/_dependencies';
-import { el } from './../../constants/_variables';
+import { React, createClassName, IBaseProps } from './../../scripts/imports';
 
-interface IColumnProps {
-	children: Array<React.ReactNode>;
-};
+function Column({ ...props }: IBaseProps) {
 
-const Column: React.FC<IColumnProps> = ({ children = el('div') }) => {
-	return el('div', {
-		className: 'column'
-	}, children);
+	const classesNames = createClassName('column', props.classes);
+
+	return React.createElement(
+		'div', { className: classesNames }, props.children
+	);
 };
 
 export default Column;
