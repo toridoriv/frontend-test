@@ -14,7 +14,7 @@ function App() {
 		counters: []
 	});
 
-	const [ currentScreen, setCurrentScreen ] = useState('App');
+	const [ currentScreen, setCurrentScreen ] = useState('Examples');
 
 	function showScreen(currentScreen: string) {
 		switch(currentScreen) {

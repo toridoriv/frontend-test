@@ -82,3 +82,14 @@ export interface IisLoading {
 	response?: any;
 };
 /* 📌 END OF API */
+
+/* 📌 Data Types */
+export interface ITag {
+	title: string;
+};
+
+export interface ITagSection {
+	category: string;
+	tags: Array<ITag>;
+};
+/* 📌 END OF Data Types */
