@@ -1,121 +1,180 @@
-# Cornershop Frontend Test
+<h1 align="center">Welcome to cornershop-frontend-test 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href=" https://github.com/nerdalot/frontend-test" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href=" https://github.com/nerdalot/frontend-test" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/nerdalot" target="_blank">
+    <img alt="Twitter: nerdalot" src="https://img.shields.io/twitter/follow/nerdalot.svg?style=social" />
+  </a>
+</p>
 
-#### ⚠️ Before you begin
+> Frontend test for Cornershop App
 
-> Create a new git repository on the root of this folder, upload it to Github, and invite [@mcarafie](https://github.com/mcarafie) and [@cornershop-hr](https://github.com/cornershop-hr) as collaborators.
 
-## Overview
 
-You have been commissioned to implement a counter application following the design specs provided [here](https://www.figma.com/file/6CnuM0Gj9oiwi2AV9vXLRH/Counters-for-the-web?node-id=0%3A1).
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-The application consists of several screens where each screen has one or multiple states that you will have to implement following the design specs the best you can.
+- [About the Project](#about-the-project)
+  - [Architecture](#architecture)
+    - [Components](#components)
+    - [Imports](#imports)
+    - [Naming](#naming)
+    - [Functions](#functions)
+  - [Version Control](#version-control)
+    - [Branches](#branches)
+    - [Commit Messages](#commit-messages)
+      - [Subject](#subject)
+      - [Body](#body)
+    - [Issues](#issues)
+  - [Built With](#built-with)
+  - [🏠 Homepage](#-homepage)
+  - [✨ Demo](#-demo)
+- [Install](#install)
+- [Usage](#usage)
+- [Run tests](#run-tests)
+- [Author](#author)
+- [🤝 Contributing](#-contributing)
+- [Show your support](#show-your-support)
+- [📝 License](#-license)
 
-We have provided starter boilerplate so you can write your application without any hassle and also a NodeJS dummy backend with all the neccessary endpoints to persist your data.
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-For bootstrapping the frontend application we're using `react-scripts`, so as you might have guessed you **must** use React (it's our primary view layer for frontend applications here at Cornershop).
 
-> Note: This is NOT a backend test. Don't make it require any databases. Don't touch the server folder. Just leave it as it is.
 
-## Requirements
+## 📃 About the Project
 
-Your submission will be evaluated considering the following criterias:
+### Architecture
 
-- Good implementation of UI elements, both visually and at code level.
-  - Extra points for writing custom styling code for UI elements.
-  - Use whatever CSS flavor you want: plane old CSS, SASS, LESS, CSS-in-JS, CSS modules, everything is allowed.
-- Good architecture and software design.
-  - _Hint:_ Usage of design patterns, good code organization, separation of concerns, etc. 
-- Use of best practices when writing code.
-  - _Hint:_ Idiomatic & readable code, good use of composition, DRY, etc.
-- The application must persist data back to the server.
-- Feature completion (all features must be implemented for a perfect score).
-- Good management of state using built-in React features or third party dependencies (context, `redux`, `mobx`, `xstate` or whatever you might like).
-- You must include tests.
-  - Behavior tests are perfect.
-- Your project must be self-contained (make sure you're not using global dependencies).
-- We would love to understand your thought process, so writing a little summary of your choices, what you did and how you solved the test is required (write it here on this README file).
+#### Components
 
-Please consider that we expect your solution to be production-ready. In other words, that millions of users would be thrilled to use your product.
+For this project I've decided to follow the [Single Responsability Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle): each component is gonna have responsability over one part of the functionality of the app. 
 
-> Note: You can use whatever dependencies/libraries you want, the only requirement dependency-wise is to use React.
+#### Imports
 
-## Getting started
-
-First and foremost, make sure you have `node` and `npm` (or `yarn`) installed on your machine, then run:
-
-```bash
-$ npm install
-$ npm start
-```
-
-For `yarn` users:
-
-```bash
-$ yarn
-$ yarn start
-```
-
-## API endpoints / examples
-
-Since the backend API runs locally on a different port (`3001`) than the `react-scripts` dev server (`3000`), we have setup a proxy so you don't have to do anything special to consume the API (fetching data from `/api/v1/counter` will do).
-
-> The following endpoints are expecting a `Content-Type: application/json` header.
-
-#### **GET** `/api/v1/counter`.
-
-_Fetch a list of counters._
-```javascript
-/* Response */
-[]
-```
-
-#### **POST** `/api/v1/counter`.
-
-_Adds a counter._
+Dependencies from `node_modules` and project files must be separated by a blank line:
 
 ```javascript
-/* Body */
-{ title: "bob" }
+import * as React from 'react'
+import { Provider } from "react-redux";
 
-/* Response */
-{ id: "asdf", title: "bob", count: 0 }
+import { store } from "../store";
 ```
 
-#### **POST** `/api/v1/counter/inc`
-_Increments the value of a counter._
-```javascript
-/* Body */
-{ id: "asdf" }
+#### Naming
 
-/* Response */
-{ id: "asdf", title: "bob", count: 1 }
+- All names must be writen in English. Always. Till the end of times.
+
+
+
+<img src="https://i.imgflip.com/4nxpfa.jpg" style="max-width:400px;" />
+
+
+
+- Names should be clear, even if longer names are needed to do so.
+- Types should be declared with Typescript, not within the function name.
+- Interface declarations should start with a capital I.
+
+#### Functions
+
+- Avoid long (god) functions. If it gets too long, it must be divided into specific actions.
+
+### Version Control
+
+I've been tracking all the changes with git so if you want to understand how I build this project in a more specific manner, this section is a guide to my practices.
+
+#### Branches
+
+- `master` 
+  - `develop`
+    - `feature`
+    - `fix`
+    - `chore`
+  - `hotfix`
+
+#### Commit Messages
+
+
+
+<img src="https://imgs.xkcd.com/comics/git_commit_2x.png" style="max-width:400px;">
+
+
+
+##### Subject
+
+- Summary of changes made.
+- Capitalized.
+- Imperative mode.
+- Prepend with one of the following keywords:
+
+| Keyword  | Description                                                  |
+| -------- | ------------------------------------------------------------ |
+| Build    | Changes related to the tools that are being used (scripts, dependencies or configuration) |
+| CI       | Continous integration and deployment changes                 |
+| Docs     | Documentation changes (internal or external)                 |
+| Feat     | Codebase changes related to new features                     |
+| Fix      | Codebase changes related to bug fixes                        |
+| Perf     | Performance improvements                                     |
+| Refactor | Development changes that don't affect functionality          |
+| Style    | Styling changes, like identations, semi-colons, quotes, etc  |
+| Test     | Add, refactor or delete tests                                |
+
+##### Body
+
+Not required, but recommended for longer changes. It must contain '*why*' and '*what*', but not '*how*'.
+
+
+#### Issues
+
+### Built With
+
+### 🏠 [Homepage](https://github.com/nerdalot/frontend-test)
+
+### ✨ [Demo]( https://github.com/nerdalot/frontend-test)
+
+## Install
+
+```sh
+npm install
 ```
 
-#### **POST** `/api/v1/counter/dec`
-_Decrements the value of a counter._
+## Usage
 
-```javascript
-/* Body */
-{ id: "asdf" }
-
-/* Response */
-{ id: "asdf", title: "bob", count: 0 }
+```sh
+npm run start
 ```
 
-#### **DELETE** `/api/v1/counter`
-_Deletes a counter._
+## Run tests
 
-```javascript
-/* Body */
-{ id: "qwer" }
-
-/* Response */
-"qwer" // The id of the deleted counter
+```sh
+npm run test
 ```
----
 
-Good luck! 🎉
+## Author
 
-We hope your submission is… to die for.
+👤 **Victoria Rodriguez <Nerdalot>**
 
-![Coffin dance](coffin.gif)
+* Website: https://toriwrites.online
+* Twitter: [@nerdalot](https://twitter.com/nerdalot)
+* Github: [@nerdalot](https://github.com/nerdalot)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page]( https://github.com/nerdalot/frontend-test). You can also take a look at the [contributing guide]( https://github.com/nerdalot/frontend-test).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2020 [Victoria Rodriguez <Nerdalot>](https://github.com/nerdalot).<br />
+This project is [MIT]( https://github.com/nerdalot/frontend-test) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

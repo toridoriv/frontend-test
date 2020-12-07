@@ -1,0 +1,163 @@
+/* Overriding Bulma styles */
+@import 'colors';
+@import '~bulma';
+@import 'bulma-helpers/css/bulma-helpers.min.css';
+
+// TODO: Move this to a better file
+* {
+  font-family: 'Lato', 'Open Sans', sans-serif!important;
+}
+
+.button {
+  border-radius: 8px!important;
+}
+
+.columns.container {
+  height: 100vh;
+  margin: 0;
+}
+
+.column.is-pull-right {
+  justify-content: flex-end;
+}
+
+.help {
+  margin-top: .8em;
+  margin-left: .5em;
+  color: #888B90;
+  button.link {
+    text-decoration: underline;
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+}
+
+.input {
+  border: 1px solid rgba(0, 0, 0, 0.02)!important;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05)!important;
+  border-radius: 8px!important;
+  &:focus {
+    border-color: $turquoise!important;
+  }
+}
+
+.pl-6 {
+  padding-left: 2.5em!important;
+}
+
+.pr-6 {
+  padding-right: 2.5em!important;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 5vh;
+}
+
+.is-body {
+  min-height: 50vh;
+}
+
+.hero.is-small {
+  h1, h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  h1 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  h2 {
+    font-weight: 300;
+  }
+}
+
+.message.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.mini-navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.message-header {
+  width: 100%;
+}
+
+.circle-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: relative;
+  //margin-left: 25%;
+}
+
+.circle {
+  border-radius: 50%;
+  align-self: center;
+  animation: ripple 5s infinite;
+  position: absolute;
+  background-color: $turquoise;
+}
+
+.main-circle {
+  opacity: .2;
+  width: 60px;
+  height: 60px;
+}
+
+.middle-circle {
+  opacity: .5;
+  width: 40px;
+  height: 40px;
+}
+
+.small-circle {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(2.0);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+// @keyframes changeSize {
+//   0%   {
+//     weight: 0px;
+//     height: 0px;
+//   }
+//   25%  {
+//     weight: 50px;
+//     height: 50px;
+//   }
+//   50%  {
+//     weight: 100px;
+//     height: 100px;
+//   }
+//   75%  {
+//     weight: 50px;
+//     height: 50px;
+//   }
+//   100% {
+//     weight: 0px;
+//     height: 0px;
+//   }
+// }

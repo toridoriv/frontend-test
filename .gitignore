@@ -90,3 +90,6 @@ typings/
 # Local settings
 .idea
 .DS_Store
+
+documentation/
+/src/react-app-env.d.ts
