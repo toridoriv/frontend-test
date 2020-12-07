@@ -1,28 +1,14 @@
-import { React } from './../../constants/_dependencies';
-import { el } from './../../constants/_variables';
+import { React, createClassName, IIconProps } from './../../scripts/imports';
 
-interface IIconProps {
-	classes?: string;
-	position?: string;
-	size: string;
-	type: string;
-}
+function Icon({ size = 'medium', ...props }: IIconProps) {
 
-const Icon: React.FC<IIconProps> = ({
-	classes = 'icon ',
-	size = 'small',
-	type = '',
-	...props
-}) => {
+	const classesNames = createClassName(`icon is-${ size }`, props.classes);
 
-	const icon = el('i', {
-		className: 'fas fa-' + type
-	});
+  const i = React.createElement('i', { className: `fas fa-${ props.type }`});
 
-	return el('span', {
-		className: props.position ? classes + 'is-' + props.position + ' is-' + size : classes + 'is-' + size
-	}, icon);
-
+	return React.createElement(
+		'span', { className: classesNames }, i
+	);
 };
 
 export default Icon;

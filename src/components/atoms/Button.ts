@@ -1,26 +1,14 @@
-import { React } from './../../constants/_dependencies';
-import { el } from './../../constants/_variables';
+import { React, createClassName, IButtonProps } from './../../scripts/imports';
 
-interface IButtonProps {
-	children?: Array<React.ReactNode>;
-  classes?: string;
-  isPrimary?: boolean;
-  label: string;
-  onClick?: () => void;
-};
-
-const Button: React.FC<IButtonProps> = ({
-	isPrimary = true,
-	label = 'Click me 😏',
-	onClick = () => { console.log('😳'); },
-	...props
-}) => {
-
-	return el('button', {
-		className: isPrimary ? 'button ' + props.classes + ' is-primary' : 'button ' + props.classes,
-		onClick
-	}, [ props.children, label ]);
-
+function Button({ ...props }: IButtonProps) {
+	const btnClasses = props.isPrimary ? createClassName('button is-primary', props.classes) : createClassName('button', props.classes);
+	return React.createElement(
+		'button', {
+			className: btnClasses,
+			onClick: props.onClick
+		},
+		props.label, props.children
+	);
 };
 
 export default Button;

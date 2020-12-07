@@ -1,18 +1,18 @@
-import React from 'react';
+import { React, createClassName, IBaseProps, logo } from './../../scripts/imports';
 
-interface ILogo {
-	url?: string;
-}
+function Logo({ ...props }: IBaseProps) {
 
-const Logo: React.FC<ILogo> = ({ url = '/../assets/img/logo.svg' }) => {
-	return React.createElement('img', {
-		className: 'is-centered align-self-center',
-		src: url,
-		style: {
-			minWidth: '70%',
-			maxWidth: '700px'
-		}
-	});
+	return React.createElement(
+		'img', {
+			className: createClassName('is-centered align-self-center', props.classes),
+			src: logo,
+			style: {
+				minWidth: '50%',
+				maxWidth: '700px'
+			},
+		},
+		props.children
+	);
 };
 
 export default Logo;
