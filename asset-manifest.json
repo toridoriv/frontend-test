@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/frontend-test/static/css/main.aa09d8c1.chunk.css",
-    "main.js": "/frontend-test/static/js/main.19f80945.chunk.js",
-    "main.js.map": "/frontend-test/static/js/main.19f80945.chunk.js.map",
-    "runtime-main.js": "/frontend-test/static/js/runtime-main.3e3b182e.js",
-    "runtime-main.js.map": "/frontend-test/static/js/runtime-main.3e3b182e.js.map",
+    "main.css": "/frontend-test/static/css/main.fb6cc31d.chunk.css",
+    "main.js": "/frontend-test/static/js/main.97631c27.chunk.js",
+    "main.js.map": "/frontend-test/static/js/main.97631c27.chunk.js.map",
+    "runtime-main.js": "/frontend-test/static/js/runtime-main.844cf7dd.js",
+    "runtime-main.js.map": "/frontend-test/static/js/runtime-main.844cf7dd.js.map",
     "static/css/2.dd702b53.chunk.css": "/frontend-test/static/css/2.dd702b53.chunk.css",
-    "static/js/2.cd541657.chunk.js": "/frontend-test/static/js/2.cd541657.chunk.js",
-    "static/js/2.cd541657.chunk.js.map": "/frontend-test/static/js/2.cd541657.chunk.js.map",
-    "static/js/3.1f3278e8.chunk.js": "/frontend-test/static/js/3.1f3278e8.chunk.js",
-    "static/js/3.1f3278e8.chunk.js.map": "/frontend-test/static/js/3.1f3278e8.chunk.js.map",
+    "static/js/2.66cf42da.chunk.js": "/frontend-test/static/js/2.66cf42da.chunk.js",
+    "static/js/2.66cf42da.chunk.js.map": "/frontend-test/static/js/2.66cf42da.chunk.js.map",
+    "static/js/3.60f3e750.chunk.js": "/frontend-test/static/js/3.60f3e750.chunk.js",
+    "static/js/3.60f3e750.chunk.js.map": "/frontend-test/static/js/3.60f3e750.chunk.js.map",
     "index.html": "/frontend-test/index.html",
     "static/css/2.dd702b53.chunk.css.map": "/frontend-test/static/css/2.dd702b53.chunk.css.map",
-    "static/css/main.aa09d8c1.chunk.css.map": "/frontend-test/static/css/main.aa09d8c1.chunk.css.map",
-    "static/js/2.cd541657.chunk.js.LICENSE.txt": "/frontend-test/static/js/2.cd541657.chunk.js.LICENSE.txt",
+    "static/css/main.fb6cc31d.chunk.css.map": "/frontend-test/static/css/main.fb6cc31d.chunk.css.map",
+    "static/js/2.66cf42da.chunk.js.LICENSE.txt": "/frontend-test/static/js/2.66cf42da.chunk.js.LICENSE.txt",
     "static/media/logo.8e81bcd7.svg": "/frontend-test/static/media/logo.8e81bcd7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3e3b182e.js",
+    "static/js/runtime-main.844cf7dd.js",
     "static/css/2.dd702b53.chunk.css",
-    "static/js/2.cd541657.chunk.js",
-    "static/css/main.aa09d8c1.chunk.css",
-    "static/js/main.19f80945.chunk.js"
+    "static/js/2.66cf42da.chunk.js",
+    "static/css/main.fb6cc31d.chunk.css",
+    "static/js/main.97631c27.chunk.js"
   ]
 }
