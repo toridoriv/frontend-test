@@ -1,7 +1,9 @@
 export function createClassName(defaultClasses: string, classes?: Array<string>):string {
+	let tempArr = [];
 	if (classes !== undefined) {
-		classes.unshift(defaultClasses);
-		return classes.join(' ');
+		tempArr.push(defaultClasses);
+		tempArr = tempArr.concat(classes);
+		return tempArr.join(' ');
 	} else {
 		return defaultClasses;
 	}
