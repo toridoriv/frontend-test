@@ -22,7 +22,7 @@ export interface ICounterState {
 	id: string;
 };
 
-export interface ICountersListState {
+export interface ICountersListState extends Array<any> {
 	counters: Array<ICounterState>;
 };
 
@@ -56,8 +56,6 @@ export interface IButtonProps extends IBaseProps {
 export interface ICounterCellProps extends IBaseProps {
 	counter: ICounterState;
 };
-
-export interface ICounterTableProps extends ICountersListState, IBaseProps {};
 
 export interface IHeroProps extends IBaseProps {
 	subtitle?: string;

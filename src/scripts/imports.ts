@@ -1,15 +1,17 @@
-export { default as React, useEffect, useState } from 'react';
+export { default as React, useEffect, useState, useMemo } from 'react';
 export { default as ReactDOM } from 'react-dom';
+export { default as faker } from 'faker';
 export { v4 as uuidv4 } from 'uuid';
 export { default as _ } from 'lodash';
 
 export { fetchCounters, postCounter } from './api';
 export { listOfExamples } from './data/examples';
+export { randomCounters } from './data/mocks';
 export { createClassName, addNewCounter } from './helpers';
 export { userStatusReducer, UserStatusProvider, UseUserStatus, UserStatusDispatch } from './store/user';
 export { countReducer, CounterContext, CounterDispatchContext, countersListReducer, CounterProvider, CountersListProvider, UseCountersListState } from './store/counter';
 
-export type { IBaseProps, IButtonProps, TDispatchUserStatus, IHeroProps, TActionUserStatus, IUserStatus, IUserStatusProps, IIconProps, ICounterState, ICounterProps, ICountersListState, TActionCounter, TDispatchCounter, TActionCountersList, TDispatchCountersList, ICounterTableProps, ICounterCellProps, IisLoading, ITag, ITagSection } from './interfaces';
+export type { IBaseProps, IButtonProps, TDispatchUserStatus, IHeroProps, TActionUserStatus, IUserStatus, IUserStatusProps, IIconProps, ICounterState, ICounterProps, ICountersListState, TActionCounter, TDispatchCounter, TActionCountersList, TDispatchCountersList, ICounterCellProps, IisLoading, ITag, ITagSection } from './interfaces';
 
 export { default as logo } from './../assets/img/logo.svg';
 
@@ -21,7 +23,7 @@ export { default as CreateCounterHeader } from '../components/molecules/CreateCo
 export { default as CreateCounterInput } from '../components/molecules/CreateCounterInput';
 export { default as Column } from '../components/atoms/Column';
 export { default as Columns } from '../components/atoms/Columns';
-export { default as CounterCell } from '../components/atoms/CounterCell';
+export { default as CounterCell } from '../components/molecules/CounterCell';
 export { default as CounterTable } from '../components/molecules/CounterTable';
 export { default as Examples } from '../components/pages/Examples';
 export { default as ExamplesHeader } from '../components/organisms/ExamplesHeader';

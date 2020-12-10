@@ -14,12 +14,30 @@ function App() {
 		counters: []
 	});
 
-	const [ currentScreen, setCurrentScreen ] = useState('Examples');
+	const [ currentScreen, setCurrentScreen ] = useState('App');
+
+	const [ hasMockData, setMockDataState ] = useState(true);
+
+	const states = {
+		userStatus,
+		loading,
+		counters,
+		currentScreen,
+		hasMockData
+	};
+
+	const actions = {
+		setUserStatus,
+		setLoading,
+		setCounters,
+		setCurrentScreen,
+		setMockDataState
+	};
 
 	function showScreen(currentScreen: string) {
 		switch(currentScreen) {
 			case 'Main': {
-				return <Main value={ [ loading, counters ] } onChange={ [setLoading, setCounters, setCurrentScreen ] }/>;
+				return <Main value={ states } onChange={ actions }/>;
 			}
 			case 'CreateCounter': {
 				return <CreateCounter value={ [ loading, counters ] } onChange={ [setLoading, setCounters, setCurrentScreen ] }/>;
