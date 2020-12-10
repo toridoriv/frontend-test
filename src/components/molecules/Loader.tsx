@@ -1,13 +1,12 @@
+import { Circle } from './../../scripts/imports';
+
 function Loader() {
+  const size = 60;
   return (
-    <div className='columns is-centered is-vcentered is-mobile'>
-      <div className='column is-flex is-half is-mobile'>
-        <div className='circle-container'>
-          <div className="circle main-circle"></div>
-          <div className='circle middle-circle'></div>
-          <div className='circle small-circle'></div>
-        </div>
-      </div>
+    <div className='is-loader-container is-flex is-justify-content-center is-align-items-center'>
+      <Circle opacity={ 0.2 } size={ `${ size }px` }/>
+      <Circle opacity={ 0.5 } size={ `${ (size / 100) * 60 }px` }/>
+      <Circle size={ `${ (size / 100) * 30 }px` }/>
     </div>
   );
 };

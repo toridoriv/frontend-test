@@ -1,3 +1,10 @@
+import { React, SetStateAction, Reducer } from './imports';
+
+export interface IStatePayload {
+	status: IUserStatus;
+	action: Reducer<any, any>;
+};
+
 /* 📌 User Status */
 export interface IUserStatus {
 	logged: boolean;
@@ -45,6 +52,11 @@ export type TDispatchCountersList = (action: TActionCountersList) => void;
 export interface IBaseProps {
 	children?: React.ReactNode;
 	classes?: Array<string>;
+};
+
+export interface ICircleProps {
+	opacity?: number;
+	size: string;
 };
 
 export interface IButtonProps extends IBaseProps {

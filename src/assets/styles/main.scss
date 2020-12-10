@@ -1,15 +1,12 @@
 /* Overriding Bulma styles */
 @import 'colors';
+@import 'mixins';
 @import '~bulma';
 @import 'bulma-helpers/css/bulma-helpers.min.css';
 
 // TODO: Move this to a better file
 * {
   font-family: 'Lato', 'Open Sans', sans-serif!important;
-}
-
-.container {
-  overflow: auto;
 }
 
 .button {
@@ -23,6 +20,10 @@
 
 .column.is-pull-right {
   justify-content: flex-end;
+}
+
+.container {
+  overflow: auto;
 }
 
 .counter-cell {
@@ -80,6 +81,16 @@
   }
 }
 
+.is-loader-container {
+  min-width: 100%;
+  min-height: 100%;
+  .circle {
+    animation: ripple 5s infinite;
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
 .pl-6 {
   padding-left: 2.5em!important;
 }
@@ -126,41 +137,16 @@
   width: 100%;
 }
 
-.circle-container {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // position: relative;
-  //margin-left: 25%;
-}
-
-.circle {
-  border-radius: 50%;
-  align-self: center;
-  animation: ripple 5s infinite;
-  position: absolute;
-  background-color: $turquoise;
-}
-
-.main-circle {
-  opacity: .2;
-  width: 60px;
-  height: 60px;
-}
-
-.middle-circle {
-  opacity: .5;
-  width: 40px;
-  height: 40px;
-}
-
-.small-circle {
-  width: 20px;
-  height: 20px;
-}
+// .circle-container {
+//   width: 300px;
+//   height: 300px;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // position: relative;
+//   //margin-left: 25%;
+// }
 
 @keyframes ripple {
   0% {
