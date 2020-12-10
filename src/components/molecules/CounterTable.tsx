@@ -1,12 +1,12 @@
-import { createClassName, ICounterTableProps, CounterCell } from './../../scripts/imports';
+import { createClassName, CounterCell, ICounterState, uuidv4 } from './../../scripts/imports';
 
 function CounterTable({
 	...props
-}: ICounterTableProps) {
+}) {
   return (
-    <table className={ createClassName('table', props.classes) }>
-      <tbody>
-        { props.counters.map(function(counter) {
+    <table className={ createClassName('table is-fullwidth is-hoverable is-borderless', props.classes) }>
+      <tbody key={ uuidv4() }>
+        { props.value.map(function(counter: ICounterState) {
           return <CounterCell counter={ counter } key={ counter.id }/>
         })}
       </tbody>
